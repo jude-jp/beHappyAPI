@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"> 
+    <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+    <title>Wego</title> 
+    <link rel="stylesheet" href="css/style.css">
+    </head> 
+    <body>       
+          
+        <div class="wrap">
+        	<div class="logo">
+        		<img src="img/logoHumanity.png" height="150" width="150" alt="" />
+        	</div>
+        	<div class="content">
+        		<h1>Promesse de don</h1>
+        		<p>Vos dons permettent de construire des écoles, des hopitaux, creuser des puits et financer les recherches.
+              Une fois vos coordonnées enregistrées, vous recevrez par E-mail, dans les jours qui suivent, votre promesse de don. Il vous suffira de nous la retourner accompagnée de votre chèque. Vous recevrez ensuite un reçu fiscal ouvrant droit à une réduction d'impôt.
+              La campagne 2014 finit dans :</p>
+	        	<div class="numbers">
+	        		<div class="bloc" id="days">
+	        		</div>
+	        		<div class="bloc" id="hours">
+	        		</div>
+	        		<div class="bloc" id="minutes">
+	        		</div>
+	        		<div class="bloc last" id="seconds">
+	        		</div>
+	        	</div>
+	        	<form action="index.php" id="subscribeForm">
+	        		<input type="text" class="text" name="mail" id="mail" placeholder="Votre mail ici">
+	        		<input type="submit" class="submit" value="Promesse">
+	        	</form>
+        	</div>
+        	<div class="footer">
+
+        		<div class="infos">
+        			<strong>www.wegoingout.com</strong><br>
+        			contacts@wegoingout.com<br>
+        			Team Wego
+        		</div>
+        	</div>
+        </div>
+         
+    </body> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tooltipsy.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript">
+function effacer(value_defaut, type)
+{
+   if (type=='input')
+   {
+      if (this.value==value_defaut)
+         this.value='';
+   }
+   else if (type=='textarea')
+   {
+      if (this.innerHTML==value_defaut)
+         this.innerHTML='';
+   }
+}
+</script>
+</html>

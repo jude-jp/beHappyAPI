@@ -1,0 +1,102 @@
+@import "compass"; 
+
+$color : #2a3c49;
+$error : #ce4a3c; 
+$success : #47ac4f; 
+
+
+@include global-reset;
+
+body{ background: url(img/bg.jpg) repeat; font-family:Arial,Helvetica, sans-serif; color: #342F2F; line-height: 20px; font-size: 14px;}
+
+.wrap{ width: 709px; margin: 0 auto;}
+.logo{ text-align: center; padding: 35px 0; background: url(img/top.png) left bottom no-repeat; }
+.content{ background: url(img/mid.png) repeat; padding:0 110px; font-weight: 200; text-align: center; position: relative;
+	h1{ color:#2a3c49; font-size: 22px; text-align: center; font-weight: bold; font-family:"Myriad Pro","FrutigerLT Black", sans-serif; padding:10px 0 25px 0;}
+	strong{ font-weight: bold;}
+	em{ font-style:italic; }
+	.bloc{ width: 97px; height: 67px; background: url(img/number.png) no-repeat; float:left; padding-top: 30px; text-align: center; color:#767676; margin-right: 30px;
+		strong{ font-size: 60px; font-weight: bold; text-align: center; display: block; color:#2a3c49; margin-bottom: 15px;}
+	}
+	.last{ margin-right: 0px;}
+	.numbers{ @include clearfix; padding: 40px 0;}
+	form{ @include clearfix; padding-bottom: 40px;}
+	.text{ float:left; padding: 0 15px; width: 250px; height: 40px; line-height: 40px; @include border-radius(10px); background: #fafafa 10px center; border:none; @include single-box-shadow(#c0c0c0, -1px, 1px, 2px, 0px, inset); outline:none; margin-left: 40px; @include transition-duration(0.5s);
+	}
+	.loading{ background: url(img/loader.gif) no-repeat 10px center #FAFAFA; padding-left: 30px; width: 235px;}
+	.submit{ border: 2px solid #eeeeee; width: 120px; text-align: center; float:left; 
+		height: 40px; 
+		background-color: #5a7a92; 
+		color: #fff; 
+		font-weight: bold; 
+		font-size: 18px;
+		cursor:pointer;
+		line-height: 30px;
+		margin-left: 16px;
+		@include border-radius(10px); font-weight: bold; 
+		@include single-text-shadow(#000,1px,1px,0px); 
+		@include background(linear-gradient(top, #5a7a92, #5a7a92 85%, #25343f));
+	}
+	.submit:hover{
+		height: 38px;
+		margin-top: 2px; 
+		line-height: 33px;
+		@include background(linear-gradient(top, #5a7a92, #5a7a92 95%, #25343f));
+	}
+}
+.footer{ 
+	background: url(img/bot.png) left top no-repeat; 
+	padding-top: 30px;
+	@include clearfix;
+	.social{
+		float:left; 
+		width: 400px;
+		img{ margin-right: 10px;}
+	}
+	.infos{
+		strong{ font-size: 14px; color:$color; }
+		text-align: right;
+		font-size: 12px;
+		color:lighten($color,10%); 
+	}
+}
+
+.alert{
+	position: absolute;
+	top:0px; left:0px; right:0px;
+	border-top:solid 5px $error;
+	.message{		
+		position: relative;
+		width: 400px;
+		margin: 0 auto;
+		height: 32px;
+		@include border-bottom-radius(5px);
+		@include single-text-shadow(rgba(0,0,0,0.6),0,1px,0px);
+		line-height: 32px;
+		color:#FFF;
+		text-align: center;
+	}
+	.close{
+		width: 22px;
+		height: 21px;
+		background: url(img/alert.png) no-repeat;
+		position: absolute;
+		top:5px;
+		right:10px;
+	}
+	&.success .close{ background-position:left bottom; }
+}
+.error .message{ background-color: $error; }
+.success .message{ background-color: $success; }
+.alert.success{ border-color:$success; }
+
+.tooltipsy{
+	margin-bottom: 3px;
+	margin-left: -4px;
+	background:#000;
+	background: rgba(0,0,0,0.8);
+	@include border-radius(5px);
+	padding: 2px 4px;
+	color:#FFF; 
+	font-size:0.8em; 
+}
